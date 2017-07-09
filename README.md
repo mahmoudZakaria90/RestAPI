@@ -1,8 +1,11 @@
 ### Getting Started
 
-#### 1- Run MongoDB
+#### 1- Setup
+```npm install```
+
+#### 2- Run MongoDB
 ```mongod```
 
 
-#### 2- run your server
+#### 3- run your server
 ```npm start```
