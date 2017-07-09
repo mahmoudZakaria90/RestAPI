@@ -6,7 +6,6 @@ const NinjaClass = require('../models/ninja');
 //Listen to GET
 router.get('/ninja', function(req, res, next) {
     let limiting = parseInt(req.query.size);
-    console.log(limiting)
     NinjaClass.find({}).limit(limiting).then(function(ninja){
         res.send(ninja);
     }).catch(next);
