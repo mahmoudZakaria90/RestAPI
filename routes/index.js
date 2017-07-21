@@ -5,8 +5,14 @@ const NinjaClass = require('../models/ninja');
 
 //Listen to GET
 router.get('/ninja', function(req, res, next) {
+    NinjaClass.find(req.query).then(function(ninja){
+        res.send(ninja);
+    }).catch(next);
+});
+router.get('/one', function(req, res, next) {
     let limiting = parseInt(req.query.size);
-    NinjaClass.find({}).limit(limiting).then(function(ninja){
+    let skiping = parseInt(req.query.offset)
+    NinjaClass.find({}).limit(limiting).skip(skiping).then(function(ninja){
         res.send(ninja);
     }).catch(next);
 })
