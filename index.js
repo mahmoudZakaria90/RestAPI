@@ -16,6 +16,7 @@ mongoose.Promise = global.Promise;
 
 //Body parser
 app.use(bodyParser.json());
+app.use(express.static(__dirname));
 
 
 
