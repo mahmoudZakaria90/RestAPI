@@ -6,20 +6,18 @@ const mongoose = require('mongoose');
 
 //Middleware
 const bodyParser = require('body-parser');
-const cors = require('cors');
 
 //Setup the app
 const app = express();
 
 //Connect to Mongodb
-mongoose.connect('mongodb://localhost/ninjawy');﻿
+mongoose.connect('mongodb://localhost/ninjawy', {useNewUrlParser: true});﻿
 mongoose.Promise = global.Promise;
 
 //Body parser
 app.use(bodyParser.json());
 
-//Cors
-app.use(cors())
+
 
 //app Routes
 app.use('/api', require('./routes'));
