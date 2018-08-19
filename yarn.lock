@@ -1900,6 +1900,10 @@ url-parse-lax@^1.0.0:
   dependencies:
     prepend-http "^1.0.1"
 
+urlencoded-parser@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/urlencoded-parser/-/urlencoded-parser-1.0.0.tgz#66b362e24743ad985fe204af122c56cd42018445"
+
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"

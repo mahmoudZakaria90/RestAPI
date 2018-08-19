@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 //Middleware
 const bodyParser = require('body-parser');
+const urlencodedParser = require('urlencoded-parser');
 
 //Setup the app
 const app = express();
@@ -17,6 +18,9 @@ mongoose.Promise = global.Promise;
 //Body parser
 app.use(bodyParser.json());
 app.use(express.static(__dirname));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(urlencodedParser);
 
 
 
